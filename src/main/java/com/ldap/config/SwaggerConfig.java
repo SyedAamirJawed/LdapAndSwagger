@@ -19,11 +19,11 @@ public class SwaggerConfig {
 		
 		return new OpenAPI()
 				.components(new Components()
-						       .addSecuritySchemes("VaultSecurityScheme", new SecurityScheme()
-						                                                           .name("VaultSecurityScheme")
+						       .addSecuritySchemes("MySecurityScheme", new SecurityScheme()
+						                                                           .name("MySecurityScheme")
 						                                                           .type(SecurityScheme.Type.HTTP)
 						                                                           .scheme("bearer").bearerFormat("JWT")))
-				.addSecurityItem(new SecurityRequirement().addList("VaultSecurityScheme"))
+				.addSecurityItem(new SecurityRequirement().addList("MYSecurityScheme"))
 				.info(swaggerInfo());
 	}
 	
@@ -31,14 +31,14 @@ public class SwaggerConfig {
      private Info swaggerInfo() {
     	 
     	 return new Info()
-    			 .title("Vault Guardian All Api")
-    			 .description("This API provides endpoints for managing Vault Guardian application")
+    			 .title("My All Api")
+    			 .description("This API provides endpoints for managing application")
     			 .version("1.0")
     			 .contact(new Contact()
     					  .name("Aamir Jawed")
     					  .email("syedaamirjawed@gmail.com")
-    					  .url("http://52.66.213.239/login"))
-    			 .license(new License().name("Vault Guardian"));       
+    					  .url("https://github.com/SyedAamirJawed"))
+    			 .license(new License().name("My Application"));       
      }
 
 }
